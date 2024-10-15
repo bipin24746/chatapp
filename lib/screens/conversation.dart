@@ -1,3 +1,4 @@
+import 'package:chatapp/containers/chatlist.dart';
 import 'package:chatapp/containers/header.dart';
 import 'package:chatapp/containers/profiles.dart';
 import 'package:chatapp/containers/search.dart';
@@ -21,7 +22,8 @@ class _ConversationsState extends State<Conversations> {
             child: Header(),
           ),
           Search(),
-          Profiles()
+          Profiles(),
+          ChatList()
         ],
       ),
     );
