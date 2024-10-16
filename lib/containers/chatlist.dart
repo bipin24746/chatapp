@@ -20,7 +20,7 @@ class ChatList extends StatelessWidget {
               String message = chats["message"] ?? '';
 
               return Padding(
-                padding: EdgeInsets.all(5),
+                padding: EdgeInsets.all(15),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -44,22 +44,28 @@ class ChatList extends StatelessWidget {
                       ),
                     ),
                     SizedBox(width: 10), // Spacing between avatar and text
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "$name",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: chats["isOnline"] == true
-                                ? Colors.green
-                                : Colors.black,
+                    InkWell(
+                      onTap: () {},
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Text(
+                              "$name",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: chats["isOnline"] == true
+                                    ? Colors.green
+                                    : Colors.black,
+                              ),
+                            ),
                           ),
-                        ),
-                        Text(
-                          message,
-                        ),
-                      ],
+                          Text(
+                            message,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),

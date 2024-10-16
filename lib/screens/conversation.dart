@@ -23,7 +23,8 @@ class _ConversationsState extends State<Conversations> {
           ),
           Search(),
           Profiles(),
-          ChatList()
+          Expanded(
+              child: ChatList())
         ],
       ),
     );
